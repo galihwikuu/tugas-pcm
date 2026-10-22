@@ -25,26 +25,74 @@
   </div>
 </section>
 
-
 <section class="container stat-wrap">
-  <div class="row text-center g-3">
+  <div class="row g-4">
+
+    <!-- Card Ranting -->
     <div class="col-md-4">
-      <div class="card stat-card"><div class="card-body py-4">
-        <div class="angka">{{ jumlah_ranting }}</div>Ranting
-      </div></div>
+      <a href="{% url 'pcm:ranting' %}" class="stat-link">
+        <div class="card stat-card stat-ranting h-100">
+          <div class="card-body">
+            <div class="stat-icon">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+            <div class="stat-label">Jaringan Organisasi</div>
+            <div class="angka">{{ jumlah_ranting }}</div>
+            <div class="stat-title">Ranting</div>
+            <div class="stat-footer">
+              <span>Lihat daftar ranting</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
+
+    <!-- Card Amal Usaha -->
     <div class="col-md-4">
-      <div class="card stat-card"><div class="card-body py-4">
-        <div class="angka">{{ jumlah_amal_usaha }}</div>Amal Usaha
-      </div></div>
+      <a href="{% url 'pcm:amal_usaha' %}" class="stat-link">
+        <div class="card stat-card stat-amal h-100">
+          <div class="card-body">
+            <div class="stat-icon">
+              <i class="bi bi-buildings"></i>
+            </div>
+            <div class="stat-label">Kontribusi Organisasi</div>
+            <div class="angka">{{ jumlah_amal_usaha }}</div>
+            <div class="stat-title">Amal Usaha</div>
+            <div class="stat-footer">
+              <span>Lihat daftar amal usaha</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
+
+    <!-- Card Anggota KTAM -->
     <div class="col-md-4">
-      <div class="card stat-card"><div class="card-body py-4">
-        <div class="angka">{% if profil %}{{ profil.jumlah_anggota_ktam }}{% else %}0{% endif %}</div>Anggota ber-KTAM
-      </div></div>
+      <a href="{% url 'pcm:pimpinan' %}" class="stat-link">
+        <div class="card stat-card stat-anggota h-100">
+          <div class="card-body">
+            <div class="stat-icon">
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="stat-label">Keanggotaan</div>
+            <div class="angka">
+              {% if profil %}{{ profil.jumlah_anggota_ktam }}{% else %}0{% endif %}
+            </div>
+            <div class="stat-title">Anggota ber-KTAM</div>
+            <div class="stat-footer">
+              <span>Lihat halaman pimpinan</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
+
   </div>
 </section>
+
 
 <section class="seksi-abu py-5 mt-5">
   <div class="container">
