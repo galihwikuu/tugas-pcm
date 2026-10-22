@@ -85,115 +85,125 @@
   </main>
 
 
-  <footer class="footer-pcm mt-5">
-    <div class="container-fluid px-4 px-lg-5">
-      <div class="row g-4 footer-main align-items-start">
 
-        <!-- Kolom 1: Logo -->
-        <div class="col-lg-4 col-md-6 footer-brand">
-          <div class="footer-logos">
-            <img
-              src="{% static 'img/logo-muhammadiyah.png' %}"
-              alt="Logo Muhammadiyah"
-              class="footer-logo-muhammadiyah"
-            >
-            <div class="footer-lazismu">
-              <i class="bi bi-flower1"></i>
-              <div class="lazismu-title">lazismu</div>
-              <div class="lazismu-tagline">memberi untuk negeri</div>
-            </div>
+<footer class="footer-pcm mt-5">
+  <div class="container-fluid px-4 px-lg-5">
+
+    <div class="row g-4 footer-main align-items-start">
+
+      <!-- Kolom 1: Logo -->
+      <div class="col-lg-4 col-md-6 footer-brand">
+        <div class="footer-logos">
+          <img
+            src="{% static 'img/logo-muhammadiyah.png' %}"
+            alt="Logo Muhammadiyah"
+            class="footer-logo-muhammadiyah"
+          >
+
+          <div class="footer-lazismu">
+            <i class="bi bi-flower1"></i>
+            <div class="lazismu-title">lazismu</div>
+            <div class="lazismu-tagline">memberi untuk negeri</div>
           </div>
         </div>
-
-        <!-- Kolom 2: Alamat dan Maps -->
-        <div class="col-lg-4 col-md-6">
-          <h3 class="footer-heading">Alamat Kami</h3>
-
-          {% if profil %}
-            <p class="footer-address">
-              {{ profil.alamat_sekretariat|linebreaksbr }}
-            </p>
-          {% else %}
-            <p class="footer-address">
-              Alamat sekretariat PCM
-            </p>
-          {% endif %}
-
-          <div class="footer-map">
-            <iframe
-              src="https://maps.google.com/maps?q={{ profil.alamat_sekretariat|urlencode }}&output=embed"
-              title="Lokasi sekretariat PCM"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-
-        <!-- Kolom 3: Visitor -->
-        <div class="col-lg-4 col-md-12">
-          <h3 class="footer-heading">Visitor</h3>
-
-          <div class="visitor-panel">
-            <div class="visitor-item">
-              <span>👥</span>
-              <div>Users Today: <strong>53</strong></div>
-            </div>
-
-            <div class="visitor-item">
-              <span>🗓️</span>
-              <div>Yesterday: <strong>46</strong></div>
-            </div>
-
-            <div class="visitor-item">
-              <span>📈</span>
-              <div>Total Users: <strong>10000</strong></div>
-            </div>
-
-            <div class="visitor-item">
-              <span>👁️</span>
-              <div>Views: <strong>10000</strong></div>
-            </div>
-
-            <div class="visitor-item">
-              <span>🟢</span>
-              <div>Online: <strong>6</strong></div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Copyright dan kontak -->
-      <div class="footer-bottom">
-        <p class="footer-copyright">
-          © {% now "Y" %} {% if profil %}{{ profil.nama }}{% else %}PCM{% endif %}.
-          All Rights Reserved.
-        </p>
+      <!-- Kolom 2: Alamat dan Google Maps -->
+      <div class="col-lg-4 col-md-6">
+        <h3 class="footer-heading">Alamat Kami</h3>
 
-        <div class="footer-contact">
-          {% if profil and profil.email %}
-            <span>
-              <i class="bi bi-envelope-fill"></i>
-              {{ profil.email }}
-            </span>
-          {% endif %}
+        {% if profil %}
+          <p class="footer-address">
+            {{ profil.alamat_sekretariat|linebreaksbr }}
+          </p>
+        {% else %}
+          <p class="footer-address">
+            Alamat sekretariat PCM
+          </p>
+        {% endif %}
 
-          {% if profil and profil.telepon %}
-            <span>
-              <i class="bi bi-telephone-fill"></i>
-              {{ profil.telepon }}
-            </span>
-          {% endif %}
+        <div class="footer-map">
+          <iframe
+            src="https://maps.google.com/maps?q={% if profil %}{{ profil.alamat_sekretariat|urlencode }}{% else %}Indonesia{% endif %}&output=embed"
+            title="Lokasi sekretariat PCM"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
-
-        <p class="footer-disclaimer">
-          Website ini dibuat untuk tugas kuliah Pemrograman Web berbasis Framework,
-          bukan website resmi {% if profil %}{{ profil.nama }}{% else %}PCM{% endif %}.
-        </p>
       </div>
+
+      <!-- Kolom 3: Tautan Cepat, di kanan Google Maps -->
+      <div class="col-lg-4 col-md-6 footer-quick-links">
+        <h3 class="footer-heading">Tautan Cepat</h3>
+
+        <ul class="list-unstyled footer-links">
+          <li>
+            <a href="{% url 'pcm:beranda' %}">
+              <i class="bi bi-chevron-right"></i>
+              Beranda
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'pcm:profil' %}">
+              <i class="bi bi-chevron-right"></i>
+              Profil
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'pcm:berita' %}">
+              <i class="bi bi-chevron-right"></i>
+              Berita
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'pcm:agenda' %}">
+              <i class="bi bi-chevron-right"></i>
+              Agenda
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </footer>
+
+    <!-- Copyright dan kontak -->
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © {% now "Y" %}
+        {% if profil %}{{ profil.nama }}{% else %}PCM{% endif %}.
+        All Rights Reserved.
+      </p>
+
+      <div class="footer-contact">
+        {% if profil and profil.email %}
+          <span>
+            <i class="bi bi-envelope-fill"></i>
+            {{ profil.email }}
+          </span>
+        {% endif %}
+
+        {% if profil and profil.telepon %}
+          <span>
+            <i class="bi bi-telephone-fill"></i>
+            {{ profil.telepon }}
+          </span>
+        {% endif %}
+      </div>
+
+      <p class="footer-disclaimer">
+        Website ini dibuat untuk tugas kuliah Pemrograman Web berbasis
+        Framework, bukan website resmi
+        {% if profil %}{{ profil.nama }}{% else %}PCM{% endif %}.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

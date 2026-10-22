@@ -528,31 +528,47 @@ body {
   border: 0;
 }
 
-.visitor-panel {
-  padding: 22px 25px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.12);
+
+/* Tautan Cepat */
+.footer-quick-links {
+    padding-left: 24px;
+    position: relative;
+    left: 50px;
 }
 
-.visitor-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  color: #fff;
-  font-size: 1.05rem;
+.footer-links {
+    margin: 0;
+    padding: 0;
 }
 
-.visitor-item:last-child {
-  margin-bottom: 0;
+.footer-links li {
+    margin-bottom: 12px;
 }
 
-.visitor-item > span {
-  font-size: 1.35rem;
+.footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-.visitor-item strong {
-  font-weight: 800;
+.footer-links a:hover {
+    color: #ffc107;
+    padding-left: 5px;
+}
+
+.footer-links a i {
+    color: #ffc107;
+    font-size: 12px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 991.98px) {
+    .footer-quick-links {
+        padding-left: 12px;
+    }
 }
 
 .footer-bottom {
