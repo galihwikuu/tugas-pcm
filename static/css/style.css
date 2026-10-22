@@ -1,0 +1,193 @@
+:root {
+  --hijau: #0a6b3b;
+  --hijau-tua: #064d2a;
+  --emas: #f2b705;
+  --abu: #f5f7f6;
+}
+
+.navbar { background: var(--hijau-tua) !important; }
+/* ===== NAVBAR PCM ===== */
+.navbar-pcm {
+  background: linear-gradient(115deg, #07552f, #087b45);
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Brand */
+.brand-pcm {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 2rem;
+  padding: 0;
+  white-space: normal;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 5px;
+  border-radius: 12px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-title {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+}
+
+.brand-tagline {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Menu navigasi */
+.navbar-pcm .navbar-nav {
+  gap: 3px;
+}
+
+.navbar-pcm .nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.65rem 0.7rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-pcm .nav-link:hover,
+.navbar-pcm .nav-link:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+/* Tombol menu mobile */
+.navbar-pcm .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar-pcm .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.15);
+}
+
+/* Tampilan HP */
+@media (max-width: 991.98px) {
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
+    font-size: 0.98rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.68rem;
+  }
+
+  .navbar-pcm .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  .navbar-pcm .navbar-nav {
+    gap: 2px;
+  }
+
+  .navbar-pcm .nav-link {
+    padding: 0.7rem 0.85rem;
+  }
+}
+
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--warna-background, #fff);
+  color: #fff;
+  padding: 9rem 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 -40px 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(6, 77, 42, 0.85) 0%,
+      rgba(10, 107, 59, 0.65) 45%,
+      rgba(10, 107, 59, 0.15) 100%
+    ),
+    var(--hero-image, none);
+
+  background-size: cover;
+  background-position: center;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 100%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 100%,
+    transparent 100%
+  );
+}
+
+.hero .tagline {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+.btn-emas { background: var(--emas); color: #1f2933; border: 0; font-weight: 600; }
+.btn-emas:hover { background: #d9a504; color: #1f2933; }
+
+.seksi-abu { background: var(--abu); }
+
+.judul-seksi::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: .5rem;
+  background: var(--emas);
+  border-radius: 2px;
+}
+
+.stat-card .angka { font-size: 2.5rem; font-weight: 700; color: var(--hijau); }
+
+.card { border: 0; box-shadow: 0 2px 12px rgba(0, 0, 0, .08); transition: transform .15s; }
+.card:hover { transform: translateY(-3px); }
+.card-img-top { height: 180px; object-fit: cover; }
+
+.stat-wrap { margin-top: -3rem; position: relative; }
+
+.tanggal-lencana {
+  background: var(--hijau);
+  color: #fff;
+  border-radius: .5rem;
+  padding: .5rem .9rem;
+  min-width: 64px;
+  align-self: flex-start;
+}

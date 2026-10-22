@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block konten %}
+
+<section class="hero"
+  {% if profil and profil.gambar_utama %}
+  style="--hero-image: url('{{ profil.gambar_utama.url }}');"
+  {% endif %}>
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <p class="text-uppercase small fw-semibold mb-2" style="color: var(--emas);">
+          Selamat datang
+        </p>
+        <h1 class="display-5 fw-bold">
+          {% if profil %}{{ profil.nama }}{% else %}Website PCM{% endif %}
+        </h1>
+        <p class="tagline lead">
+          {% if profil %}{{ profil.tagline }}{% else %}Isi Profil organisasi lewat halaman admin.{% endif %}
+        </p>
+        <a href="{% url 'pcm:profil' %}" class="btn btn-emas btn-lg me-2">Tentang Kami</a>
+        <a href="{% url 'pcm:berita' %}" class="btn btn-outline-light btn-lg">Baca Berita</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container stat-wrap">
+  <div class="row text-center g-3">
+    <div class="col-md-4">
+      <div class="card stat-card"><div class="card-body py-4">
+        <div class="angka">{{ jumlah_ranting }}</div>Ranting
+      </div></div>
+    </div>
+    <div class="col-md-4">
+      <div class="card stat-card"><div class="card-body py-4">
+        <div class="angka">{{ jumlah_amal_usaha }}</div>Amal Usaha
+      </div></div>
+    </div>
+    <div class="col-md-4">
+      <div class="card stat-card"><div class="card-body py-4">
+        <div class="angka">{% if profil %}{{ profil.jumlah_anggota_ktam }}{% else %}0{% endif %}</div>Anggota ber-KTAM
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="seksi-abu py-5 mt-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <h2 class="judul-seksi mb-0">Berita Terbaru</h2>
+      <a href="{% url 'pcm:berita' %}" class="link-success fw-semibold">Lihat semua</a>
+    </div>
+    <div class="row g-3">
+      {% for berita in berita_terbaru %}
+      <div class="col-md-4">{% include "pcm/_kartu_berita.html" %}</div>
+      {% empty %}
+      <p class="text-muted">Belum ada berita.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="d-flex justify-content-between align-items-end mb-4">
+    <h2 class="judul-seksi mb-0">Agenda Mendatang</h2>
+    <a href="{% url 'pcm:agenda' %}" class="link-success fw-semibold">Lihat semua</a>
+  </div>
+  <div class="row g-3">
+    {% for agenda in agenda_mendatang %}
+    <div class="col-md-4">
+      <div class="card h-100"><div class="card-body d-flex gap-3">
+        <div class="tanggal-lencana text-center">
+          <div class="fs-3 fw-bold lh-1">{{ agenda.waktu_mulai|date:"d" }}</div>
+            <div class="small text-uppercase">{{ agenda.waktu_mulai|date:"M" }}</div>
+          </div>
+          <div>
+            <h5 class="mb-1">{{ agenda.nama_kegiatan }}</h5>
+            <div class="small text-muted">{{ agenda.waktu_mulai|date:"H:i" }} · {{ agenda.tempat }}</div>
+          </div>
+        </div></div>
+      </div>
+    {% empty %}
+      <p class="text-muted">Belum ada agenda mendatang.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

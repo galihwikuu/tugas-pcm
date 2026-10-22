@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block judul %}Pimpinan{% endblock %}
+
+{% block konten %}
+<div class="container my-5">
+  <h1 class="mb-4">Pimpinan</h1>
+  <div class="row g-3">
+    {% for orang in daftar_pimpinan %}
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 text-center">
+          {% if orang.foto %}
+            <img src="{{ orang.foto.url }}" class="card-img-top" alt="{{ orang.nama }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ orang.nama }}</h5>
+            <p class="mb-0">{{ orang.jabatan }}</p>
+            <p class="small text-muted">{{ orang.periode }}</p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-muted">Belum ada data pimpinan.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

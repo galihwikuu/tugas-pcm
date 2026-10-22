@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block judul %}Profil{% endblock %}
+
+{% block konten %}
+<div class="container my-5">
+  <h1 class="mb-4">Profil</h1>
+  {% if profil %}
+    <h2 class="h4">Tentang Kami</h2>
+    <p>{{ profil.tentang|linebreaks }}</p>
+
+    {% if profil.sejarah %}
+      <h2 class="h4 mt-4">Sejarah</h2>
+      {{ profil.sejarah|linebreaks }}
+    {% endif %}
+
+    {% if profil.visi %}
+      <h2 class="h4 mt-4">Visi</h2>
+      {{ profil.visi|linebreaks }}
+    {% endif %}
+
+    {% if profil.misi %}
+      <h2 class="h4 mt-4">Misi</h2>
+      <ol>
+        {% for misi in profil.daftar_misi %}
+          <li>{{ misi }}</li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+  {% else %}
+    <p class="text-muted">Profil organisasi belum diisi.</p>
+  {% endif %}
+</div>
+{% endblock %}
