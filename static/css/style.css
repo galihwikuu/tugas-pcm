@@ -329,6 +329,17 @@ body {
   font-size: 1rem;
 }
 
+
+.footer-logo-lazismu {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+
 @media (max-width: 767.98px) {
   .stat-wrap {
     margin-top: -1rem;
