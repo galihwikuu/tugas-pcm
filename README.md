@@ -97,12 +97,12 @@ Perintah ini membuat file `db.sqlite3` di folder proyek.
 ### 5. Muat data awal
 
 ```bash
-uv run python manage.py loaddata data_awal
+uv run python manage.py seed_pcm
 ```
 
-Data awal (profil, pimpinan, ranting, amal usaha, berita, agenda) dimuat dari `pcm/fixtures/data_awal.json`. Gunakan database yang masih kosong. Jika database sudah berisi data dengan ID yang sama, datanya akan tertimpa.
+Command ini memuat data awal (profil, pimpinan, ranting, amal usaha, berita, agenda) dari `pcm/fixtures/data_awal.json`. Gunakan database yang masih kosong. Jika database sudah berisi data dengan ID yang sama, datanya akan tertimpa.
 
-> **Catatan:** data awal hanya berisi teks. Foto tidak ikut repository, jadi gambar di hero, kartu pimpinan, dan kartu berita tidak tampil. Halaman tetap berjalan tanpa error. Foto dapat diunggah lewat halaman admin.
+> **Catatan:** foto yang dirujuk data awal tersimpan di folder `media/` dan ikut repository, jadi gambar di hero, kartu pimpinan, berita, dan amal usaha tampil setelah data dimuat. Foto yang diunggah lewat admin setelah itu hanya tersimpan di komputer yang mengunggahnya.
 
 ### 6. Buat akun administrator
 
@@ -127,7 +127,7 @@ Buka `http://127.0.0.1:8000/`. Panel admin ada di `http://127.0.0.1:8000/admin/`
 | Pasang dependency | `uv sync` |
 | Migrasi database | `uv run python manage.py migrate` |
 | Buat migrasi setelah mengubah model | `uv run python manage.py makemigrations pcm` |
-| Muat data awal | `uv run python manage.py loaddata data_awal` |
+| Muat data awal | `uv run python manage.py seed_pcm` |
 | Jalankan server | `uv run python manage.py runserver` |
 | Buat administrator | `uv run python manage.py createsuperuser` |
 | Cek konfigurasi | `uv run python manage.py check` |
@@ -150,8 +150,16 @@ tugas-pcm/
 │   ├── urls.py
 │   ├── admin.py
 │   ├── context_processors.py
+│   ├── management/
+│   │   └── commands/
+│   │       └── seed_pcm.py # command pengisi data awal
 │   └── fixtures/
 │       └── data_awal.json
+├── media/                  # foto yang dirujuk data awal
+│   ├── profil/
+│   ├── pimpinan/
+│   ├── amal_usaha/
+│   └── berita/
 ├── templates/
 │   ├── base.html
 │   └── pcm/
@@ -166,7 +174,7 @@ tugas-pcm/
 2. Jika ada perubahan pada `pcm/models.py` atau folder `migrations`: `uv sync` lalu `uv run python manage.py migrate`.
 3. Setelah selesai: `git add .`, `git commit -m "pesan perubahan"`, lalu `git push`.
 
-Yang **tidak** ikut repository: `.venv/`, `db.sqlite3`, `.env`, `media/`, dan `staticfiles/`. Data yang diisi lewat admin hanya tersimpan di database lokal masing-masing.
+Yang **tidak** ikut repository: `.venv/`, `db.sqlite3`, `.env`, dan `staticfiles/`. Data yang diisi lewat admin hanya tersimpan di database lokal masing-masing. Folder `media/` ikut repository, tetapi hanya berisi foto untuk data awal.
 
 ## Pemecahan Masalah
 
@@ -176,7 +184,7 @@ Yang **tidak** ikut repository: `.venv/`, `db.sqlite3`, `.env`, `media/`, dan `s
 | `No module named 'dotenv'` | Dependency belum terpasang. Jalankan `uv sync` |
 | `No installed app with label 'pcm'` | `'pcm'` belum ada di `INSTALLED_APPS` pada `config/settings.py` |
 | Halaman menampilkan "Belum ada ..." | Data awal belum dimuat. Jalankan langkah 5 atau isi lewat admin |
-| Gambar tidak tampil | Foto tidak ikut repository. Unggah ulang lewat admin |
+| Gambar tidak tampil | Data awal belum dimuat (langkah 5), atau isi folder `media/` tidak lengkap setelah clone. Foto yang diunggah lewat admin di komputer lain juga tidak ikut |
 | `TemplateDoesNotExist` | Nama atau letak file template tidak sesuai. `base.html` ada di `templates/`, sedangkan template halaman ada di `templates/pcm/` |
 | Versi Python tidak sesuai | Jalankan `uv python install 3.14`, lalu `uv sync` |
 
