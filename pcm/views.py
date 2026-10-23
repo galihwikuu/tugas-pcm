@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 
-from .models import Agenda, AmalUsaha, Berita, Pimpinan, Ranting
+from .models import Agenda, AmalUsaha, Berita, Pimpinan, ProfilOrganisasi, Ranting, FotoKondisi
 
 def beranda(request):
     konteks = {
@@ -9,11 +9,23 @@ def beranda(request):
         "agenda_mendatang": Agenda.objects.filter(waktu_mulai__gte=timezone.now())[:3],
         "jumlah_ranting": Ranting.objects.count(),
         "jumlah_amal_usaha": AmalUsaha.objects.count(),
+        "jumlah_pimpinan": Pimpinan.objects.count(),
     }
     return render(request, "pcm/beranda.html", konteks)
 
+
 def profil_organisasi(request):
-    return render(request, "pcm/profil.html")
+    profil = ProfilOrganisasi.objects.first()
+    foto_kondisi = FotoKondisi.objects.all()
+
+    konteks = {
+        "profil": profil,
+        "daftar_pimpinan": Pimpinan.objects.all(),
+        "foto_kondisi": foto_kondisi,
+    }
+
+    return render(request, "pcm/profil.html", konteks)
+
 
 def daftar_pimpinan(request):
     return render(request, "pcm/pimpinan.html", {"daftar_pimpinan": Pimpinan.objects.all()})

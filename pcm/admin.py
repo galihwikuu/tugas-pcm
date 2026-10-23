@@ -10,6 +10,7 @@ from .models import (
     ProfilOrganisasi,
     Ranting,
     TautanTerkait,
+    FotoKondisi,
 )
 
 admin.site.site_header = "Admin Website PCM"
@@ -85,3 +86,10 @@ class PesanMasukAdmin(admin.ModelAdmin):
 class TautanTerkaitAdmin(admin.ModelAdmin):
     list_display = ("nama", "url", "urutan")
     list_editable = ("urutan",)
+
+
+@admin.register(FotoKondisi)
+class FotoKondisiAdmin(admin.ModelAdmin):
+    list_display = ("id", "keterangan", "urutan")
+    list_filter = ()
+    ordering = ("urutan", "id")

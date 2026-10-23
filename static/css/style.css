@@ -651,3 +651,717 @@ body {
     gap: 12px;
   }
 }
+
+
+/* =========================================
+   HALAMAN PROFIL ORGANISASI PCM
+   ========================================= */
+
+.profil-page {
+    --profil-green: #176b45;
+    --profil-green-dark: #104b32;
+    --profil-green-soft: #edf6f0;
+    --profil-gold: #d5a843;
+    --profil-text: #34443a;
+    --profil-muted: #718078;
+    --profil-border: #e4ebe6;
+    color: var(--profil-text);
+    overflow: hidden;
+    background: #fff;
+}
+
+.profil-page .container {
+    position: relative;
+}
+
+/* HERO */
+
+.profil-page .profil-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    padding: 76px 0;
+    overflow: hidden;
+    color: #fff;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(213, 168, 67, 0.24),
+            transparent 28%
+        ),
+        linear-gradient(
+            120deg,
+            var(--profil-green-dark),
+            var(--profil-green) 65%,
+            #278454
+        );
+}
+
+.profil-page .profil-hero::before,
+.profil-page .profil-hero::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.profil-page .profil-hero::before {
+    width: 350px;
+    height: 350px;
+    top: -180px;
+    right: -45px;
+}
+
+.profil-page .profil-hero::after {
+    width: 230px;
+    height: 230px;
+    right: 65px;
+    bottom: -155px;
+}
+
+.profil-page .profil-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+    color: #ffe7a5;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.profil-page .profil-eyebrow::before {
+    width: 7px;
+    height: 7px;
+    content: "";
+    background: var(--profil-gold);
+    border-radius: 50%;
+}
+
+.profil-page .profil-hero h1 {
+    max-width: 850px;
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -1px;
+}
+
+.profil-page .profil-hero p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* JARAK DAN JUDUL SECTION */
+
+.profil-page .profil-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.profil-page .profil-section-title {
+    position: relative;
+    margin: 0 0 25px;
+    padding-bottom: 16px;
+    color: var(--profil-green-dark);
+    font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.profil-page .profil-section-title::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 58px;
+    height: 4px;
+    content: "";
+    background: var(--profil-gold);
+    border-radius: 10px;
+}
+
+.profil-page .text-center .profil-section-title::after {
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.profil-page .profil-text {
+    color: var(--profil-text);
+    font-size: 1rem;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.profil-page .profil-text p:last-child {
+    margin-bottom: 0;
+}
+
+.profil-page .profil-text h3,
+.profil-page .profil-section h3 {
+    color: var(--profil-green-dark);
+    font-weight: 700;
+}
+
+.profil-page .text-muted {
+    color: var(--profil-muted) !important;
+    line-height: 1.8;
+}
+
+/* FOTO UTAMA */
+
+.profil-page .profil-main-image {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border: 6px solid #fff;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(20, 75, 48, 0.14);
+}
+
+/* LATAR VISI, MISI, DAN GALERI */
+
+.profil-page .profil-highlight {
+    padding: 76px 0;
+    background: var(--profil-green-soft);
+}
+
+.profil-page .profil-highlight > .container > .text-center {
+    margin-bottom: 38px !important;
+}
+
+.profil-page .profil-card {
+    height: 100%;
+    padding: 34px;
+    background: #fff;
+    border: 1px solid var(--profil-border);
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(20, 75, 48, 0.055);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profil-page .profil-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(20, 75, 48, 0.1);
+}
+
+.profil-page .profil-card .profil-section-title {
+    font-size: 1.65rem;
+}
+
+.profil-page .profil-misi {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: misi;
+}
+
+.profil-page .profil-misi li {
+    position: relative;
+    min-height: 42px;
+    padding: 9px 0 9px 52px;
+    color: var(--profil-text);
+    line-height: 1.8;
+    counter-increment: misi;
+}
+
+.profil-page .profil-misi li::before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    content: counter(misi, decimal-leading-zero);
+    place-items: center;
+    color: var(--profil-green);
+    background: var(--profil-green-soft);
+    border: 1px solid #d5e8db;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+/* STRUKTUR ORGANISASI */
+
+.profil-page #struktur > .text-center {
+    margin-bottom: 38px !important;
+}
+
+.profil-page .pengurus-card {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--profil-border);
+    border-radius: 17px;
+    box-shadow: 0 7px 25px rgba(20, 75, 48, 0.055);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profil-page .pengurus-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(20, 75, 48, 0.13);
+}
+
+.profil-page .pengurus-photo,
+.profil-page .pengurus-photo-placeholder {
+    display: block;
+    width: 100%;
+    height: 245px;
+}
+
+.profil-page .pengurus-photo {
+    object-fit: cover;
+    object-position: center top;
+    background: #f1f5f2;
+}
+
+.profil-page .pengurus-photo-placeholder {
+    display: grid;
+    place-items: center;
+    color: #8ba697;
+    background: linear-gradient(135deg, #edf6f0, #dcebe1);
+}
+
+.profil-page .pengurus-photo-placeholder i {
+    font-size: 5rem;
+}
+
+.profil-page .pengurus-card .p-3 {
+    padding: 22px 15px !important;
+}
+
+.profil-page .pengurus-card h3 {
+    color: var(--profil-green-dark);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.profil-page .pengurus-jabatan {
+    color: var(--profil-green);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.profil-page .pengurus-card small {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.78rem;
+}
+
+/* GALERI FOTO KONDISI */
+
+.profil-page #foto-kondisi .row {
+    align-items: stretch;
+}
+
+.profil-page .kondisi-card {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--profil-border);
+    border-radius: 15px;
+    box-shadow: 0 6px 22px rgba(20, 75, 48, 0.055);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profil-page .kondisi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 30px rgba(20, 75, 48, 0.12);
+}
+
+.profil-page .kondisi-card a {
+    display: block;
+    overflow: hidden;
+    background: #e9f0eb;
+}
+
+.profil-page .kondisi-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.profil-page .kondisi-card:hover img {
+    transform: scale(1.045);
+}
+
+.profil-page .kondisi-card .p-3 {
+    padding: 15px !important;
+}
+
+.profil-page .kondisi-card p {
+    color: var(--profil-text);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.profil-page .kondisi-photo-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #e9f0eb;
+    cursor: zoom-in;
+}
+
+.profil-page .kondisi-photo-button img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profil-page .kondisi-photo-button:hover img {
+    transform: scale(1.05);
+}
+
+.profil-page .kondisi-photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    background: rgba(16, 75, 50, 0.65);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.profil-page .kondisi-photo-button:hover .kondisi-photo-overlay,
+.profil-page .kondisi-photo-button:focus-visible .kondisi-photo-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+    .profil-page .kondisi-photo-button img {
+        height: 155px;
+    }
+
+    .profil-page .kondisi-photo-overlay {
+        font-size: 0.8rem;
+    }
+}
+/* LOKASI DAN KONTAK */
+
+.profil-page #lokasi .profil-section-title {
+    margin-bottom: 24px;
+}
+
+.profil-page #lokasi .profil-text {
+    margin-bottom: 22px;
+}
+
+.profil-page #lokasi p {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    color: var(--profil-text);
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.profil-page #lokasi p i {
+    margin-top: 4px;
+    color: var(--profil-green);
+    font-size: 1.1rem;
+}
+
+.profil-page #lokasi .btn-success {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px 19px;
+    color: #fff;
+    background: var(--profil-green);
+    border: 1px solid var(--profil-green);
+    border-radius: 9px;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.profil-page #lokasi .btn-success:hover {
+    background: var(--profil-green-dark);
+    border-color: var(--profil-green-dark);
+    transform: translateY(-2px);
+}
+
+.profil-page .profil-map {
+    display: block;
+    width: 100%;
+    height: 390px;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(20, 75, 48, 0.12);
+}
+
+/* KONDISI KOSONG */
+
+.profil-page .profil-section .text-center.text-muted,
+.profil-page .profil-highlight .text-center.text-muted {
+    padding: 28px 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px dashed #cbd9cf;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 991.98px) {
+    .profil-page .profil-hero {
+        min-height: 260px;
+        padding: 60px 0;
+    }
+
+    .profil-page .profil-section,
+    .profil-page .profil-highlight {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .profil-page .profil-main-image {
+        max-height: 360px;
+    }
+
+    .profil-page .pengurus-photo,
+    .profil-page .pengurus-photo-placeholder {
+        height: 220px;
+    }
+
+    .profil-page .kondisi-card img {
+        height: 200px;
+    }
+
+    .profil-page .profil-map {
+        height: 340px;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 575.98px) {
+    .profil-page .profil-hero {
+        min-height: 230px;
+        padding: 48px 0;
+    }
+
+    .profil-page .profil-hero h1 {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+        overflow-wrap: anywhere;
+    }
+
+    .profil-page .profil-hero p {
+        font-size: 0.96rem;
+    }
+
+    .profil-page .profil-eyebrow {
+        margin-bottom: 14px;
+        font-size: 0.75rem;
+    }
+
+    .profil-page .profil-section,
+    .profil-page .profil-highlight {
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+
+    .profil-page .profil-section-title {
+        margin-bottom: 20px;
+        font-size: 1.55rem;
+    }
+
+    .profil-page .profil-text {
+        font-size: 0.95rem;
+        line-height: 1.85;
+    }
+
+    .profil-page .profil-main-image {
+        max-height: 290px;
+        border-width: 4px;
+        border-radius: 15px;
+    }
+
+    .profil-page .profil-card {
+        padding: 24px 20px;
+        border-radius: 14px;
+    }
+
+    .profil-page .profil-card .profil-section-title {
+        font-size: 1.4rem;
+    }
+
+    .profil-page .profil-misi {
+        gap: 10px;
+    }
+
+    .profil-page .pengurus-photo,
+    .profil-page .pengurus-photo-placeholder {
+        height: 175px;
+    }
+
+    .profil-page .pengurus-photo-placeholder i {
+        font-size: 3.7rem;
+    }
+
+    .profil-page .pengurus-card .p-3 {
+        padding: 15px 10px !important;
+    }
+
+    .profil-page .pengurus-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .profil-page .pengurus-jabatan {
+        font-size: 0.82rem;
+    }
+
+    .profil-page .pengurus-card small {
+        font-size: 0.72rem;
+    }
+
+    .profil-page .kondisi-card img {
+        height: 155px;
+    }
+
+    .profil-page .kondisi-card .p-3 {
+        padding: 11px !important;
+    }
+
+    .profil-page .kondisi-card p {
+        font-size: 0.82rem;
+    }
+
+    .profil-page .profil-map {
+        height: 280px;
+        border-radius: 13px;
+    }
+
+    .profil-page #lokasi .btn-success {
+        width: 100%;
+    }
+}
+
+/* AKSESIBILITAS: KURANGI ANIMASI */
+
+@media (prefers-reduced-motion: reduce) {
+    .profil-page *,
+    .profil-page *::before,
+    .profil-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* Galeri foto kondisi: berjajar dan ukuran sedang */
+.profil-page #foto-kondisi .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 24px;
+}
+
+.profil-page #foto-kondisi .row > [class*="col-"] {
+    display: flex;
+}
+
+.profil-page .kondisi-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+/* Ukuran foto sedang */
+.profil-page .kondisi-photo-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #edf3ef;
+    cursor: zoom-in;
+}
+
+.profil-page .kondisi-photo-button img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profil-page .kondisi-photo-button:hover img {
+    transform: scale(1.04);
+}
+
+/* Tampilan saat foto diarahkan kursor */
+.profil-page .kondisi-photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    background: rgba(16, 75, 50, 0.55);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.profil-page .kondisi-photo-button:hover .kondisi-photo-overlay,
+.profil-page .kondisi-photo-button:focus-visible .kondisi-photo-overlay {
+    opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 767.98px) {
+    .profil-page .kondisi-photo-button img {
+        height: 180px;
+    }
+}
+
+/* HP */
+@media (max-width: 575.98px) {
+    .profil-page .kondisi-photo-button img {
+        height: 155px;
+    }
+}

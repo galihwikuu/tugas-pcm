@@ -27,6 +27,20 @@ class ProfilOrganisasi(models.Model):
         return [baris.strip() for baris in self.misi.splitlines() if baris.strip()]
 
 
+class FotoKondisi(models.Model):
+    gambar = models.ImageField(upload_to="profil/kondisi/")
+    keterangan = models.CharField(max_length=200, blank=True)
+    urutan = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["urutan", "id"]
+        verbose_name = "Foto kondisi"
+        verbose_name_plural = "Foto kondisi"
+
+    def __str__(self):
+        return self.keterangan or f"Foto kondisi #{self.pk}"
+
+
 class Pimpinan(models.Model):
     nama = models.CharField(max_length=150)
     jabatan = models.CharField(max_length=100)

@@ -68,28 +68,28 @@
       </a>
     </div>
 
-    <!-- Card Anggota KTAM -->
+
+    <!-- Card Ranting -->
     <div class="col-md-4">
       <a href="{% url 'pcm:pimpinan' %}" class="stat-link">
         <div class="card stat-card stat-anggota h-100">
           <div class="card-body">
             <div class="stat-icon">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-diagram-3"></i>
             </div>
-            <div class="stat-label">Keanggotaan</div>
+            <div class="stat-label">Pimpinan</div>
             <div class="angka">
-              {% if profil %}{{ profil.jumlah_anggota_ktam }}{% else %}0{% endif %}
+              {{ jumlah_pimpinan|default:0 }}
             </div>
-            <div class="stat-title">Anggota</div>
+            <div class="stat-title">Pimpinan</div>
             <div class="stat-footer">
-              <span>Lihat halaman pimpinan</span>
+              <span>Lihat daftar pimpinan</span>
               <i class="bi bi-arrow-up-right"></i>
             </div>
           </div>
         </div>
       </a>
     </div>
-
   </div>
 </section>
 
