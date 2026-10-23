@@ -18,6 +18,42 @@
   }
 },
 {
+  "model": "pcm.fotokondisi",
+  "pk": 1,
+  "fields": {
+    "gambar": "profil/kondisi/unnamed_2.webp",
+    "keterangan": "",
+    "urutan": 0
+  }
+},
+{
+  "model": "pcm.fotokondisi",
+  "pk": 2,
+  "fields": {
+    "gambar": "profil/kondisi/unnamed_1.webp",
+    "keterangan": "",
+    "urutan": 0
+  }
+},
+{
+  "model": "pcm.fotokondisi",
+  "pk": 3,
+  "fields": {
+    "gambar": "profil/kondisi/IMG_9625.jpeg",
+    "keterangan": "Khitanan Massal",
+    "urutan": 1
+  }
+},
+{
+  "model": "pcm.fotokondisi",
+  "pk": 4,
+  "fields": {
+    "gambar": "profil/kondisi/1000017247_1R6vYCa.jpg",
+    "keterangan": "TokoMU",
+    "urutan": 0
+  }
+},
+{
   "model": "pcm.pimpinan",
   "pk": 1,
   "fields": {
@@ -36,6 +72,16 @@
     "ketua": "",
     "alamat": "Gemolong Sragen",
     "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 2,
+  "fields": {
+    "nama": "PRM Gemolong 2",
+    "ketua": "wikukwikukk",
+    "alamat": "Oro oro dowo Gemolong, Sragen",
+    "telepon": "085642361510"
   }
 },
 {
