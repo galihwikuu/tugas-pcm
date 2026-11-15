@@ -3,15 +3,30 @@ from django.utils import timezone
 
 from .models import Agenda, AmalUsaha, Berita, Pimpinan, ProfilOrganisasi, Ranting, FotoKondisi
 
+
 def beranda(request):
     konteks = {
+        # Berita
         "berita_terbaru": Berita.objects.terbit()[:3],
-        "agenda_mendatang": Agenda.objects.filter(waktu_mulai__gte=timezone.now())[:3],
+
+        # Agenda
+        "agenda_mendatang": Agenda.objects.filter(
+            waktu_mulai__gte=timezone.now()
+        )[:3],
+
+        # Statistik
         "jumlah_ranting": Ranting.objects.count(),
         "jumlah_amal_usaha": AmalUsaha.objects.count(),
         "jumlah_pimpinan": Pimpinan.objects.count(),
+
+        # Pimpinan di halaman utama
+        "daftar_pimpinan": Pimpinan.objects.order_by(
+            "urutan", "nama"
+        )[:3],
     }
+
     return render(request, "pcm/beranda.html", konteks)
+
 
 
 def profil_organisasi(request):

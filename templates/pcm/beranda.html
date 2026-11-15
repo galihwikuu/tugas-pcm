@@ -25,72 +25,84 @@
   </div>
 </section>
 
-<section class="container stat-wrap">
-  <div class="row g-4">
+<!-- SECTION PIMPINAN ORGANISASI -->
+<section class="section-pimpinan py-5">
+    <div class="container">
 
-    <!-- Card Ranting -->
-    <div class="col-md-4">
-      <a href="{% url 'pcm:ranting' %}" class="stat-link">
-        <div class="card stat-card stat-ranting h-100">
-          <div class="card-body">
-            <div class="stat-icon">
-              <i class="bi bi-diagram-3"></i>
-            </div>
-            <div class="stat-label">Jaringan Organisasi</div>
-            <div class="angka">{{ jumlah_ranting }}</div>
-            <div class="stat-title">Ranting</div>
-            <div class="stat-footer">
-              <span>Lihat daftar ranting</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </div>
-          </div>
+        <div class="text-center mb-4">
+            <span class="pimpinan-subtitle">STRUKTUR ORGANISASI</span>
+            <h2 class="pimpinan-heading">Pimpinan PCM Gemolong</h2>
+            <p class="pimpinan-description">
+                Mengenal jajaran pimpinan Pimpinan Cabang Muhammadiyah Gemolong.
+            </p>
         </div>
-      </a>
-    </div>
 
-    <!-- Card Amal Usaha -->
-    <div class="col-md-4">
-      <a href="{% url 'pcm:amal_usaha' %}" class="stat-link">
-        <div class="card stat-card stat-amal h-100">
-          <div class="card-body">
-            <div class="stat-icon">
-              <i class="bi bi-buildings"></i>
+        {% if daftar_pimpinan %}
+        <div class="pimpinan-carousel-wrapper">
+
+            <button class="pimpinan-nav pimpinan-prev"
+                    type="button" aria-label="Pimpinan sebelumnya">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="pimpinan-carousel" id="pimpinanCarousel">
+
+                {% for pimpinan in daftar_pimpinan %}
+                <div class="pimpinan-slide">
+
+                    <div class="pimpinan-card">
+
+                        <div class="pimpinan-foto-wrapper">
+                            {% if pimpinan.foto %}
+                                <img src="{{ pimpinan.foto.url }}"
+                                     alt="{{ pimpinan.nama }}"
+                                     class="pimpinan-foto">
+                            {% else %}
+                                <div class="pimpinan-no-foto">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="pimpinan-info">
+                            <h3>{{ pimpinan.nama }}</h3>
+                            <span class="pimpinan-jabatan">
+                                {{ pimpinan.jabatan }}
+                            </span>
+                            <span class="pimpinan-periode">
+                                Periode {{ pimpinan.periode }}
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+
             </div>
-            <div class="stat-label">Kontribusi Organisasi</div>
-            <div class="angka">{{ jumlah_amal_usaha }}</div>
-            <div class="stat-title">Amal Usaha</div>
-            <div class="stat-footer">
-              <span>Lihat daftar amal usaha</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </div>
-          </div>
+
+            <button class="pimpinan-nav pimpinan-next"
+                    type="button" aria-label="Pimpinan berikutnya">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
         </div>
-      </a>
-    </div>
 
+        <div class="pimpinan-indicators" id="pimpinanIndicators"></div>
 
-    <!-- Card Ranting -->
-    <div class="col-md-4">
-      <a href="{% url 'pcm:pimpinan' %}" class="stat-link">
-        <div class="card stat-card stat-anggota h-100">
-          <div class="card-body">
-            <div class="stat-icon">
-              <i class="bi bi-diagram-3"></i>
-            </div>
-            <div class="stat-label">Pimpinan</div>
-            <div class="angka">
-              {{ jumlah_pimpinan|default:0 }}
-            </div>
-            <div class="stat-title">Pimpinan</div>
-            <div class="stat-footer">
-              <span>Lihat daftar pimpinan</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </div>
-          </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'pcm:pimpinan' %}" class="btn-pimpinan">
+                Lihat Seluruh Pimpinan
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
-      </a>
+
+        {% else %}
+        <p class="text-center text-muted">
+            Data pimpinan belum tersedia.
+        </p>
+        {% endif %}
+
     </div>
-  </div>
 </section>
 
 

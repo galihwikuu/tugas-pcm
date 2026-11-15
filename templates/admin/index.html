@@ -1,0 +1,180 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static log admin_tags %}
+
+{% block content %}
+
+<div class="pcm-dashboard">
+
+    <!-- WELCOME -->
+    <section class="pcm-welcome">
+        <div>
+            <span class="pcm-eyebrow">PUSAT ADMINISTRASI</span>
+            <h1>Selamat datang di PCM Gemolong</h1>
+            <p>
+                Kelola informasi, kegiatan, organisasi, dan layanan
+                website PCM Gemolong melalui satu tempat.
+            </p>
+        </div>
+        <div class="pcm-welcome-icon">
+            <img src="{% static 'img/logo-muhammadiyah.png'%}" alt="Logo Muhammadiyah">
+        </div>
+    </section>
+
+    <!-- SECTION TITLE -->
+    <div class="pcm-section-heading">
+        <div>
+            <h2>Pengelolaan Website</h2>
+            <p>Pilih bagian yang ingin kamu kelola.</p>
+        </div>
+    </div>
+
+    <!-- DATA CARDS -->
+    <section class="pcm-data-sections">
+
+        {% for app in app_list %}
+            <div class="pcm-app-section">
+
+                <div class="pcm-app-heading">
+                    <div class="pcm-app-icon">
+                        {% if app.app_label == "auth" %}
+                            ♙
+                        {% else %}
+                            ◈
+                        {% endif %}
+                    </div>
+                    <div>
+                        <h3>{{ app.name }}</h3>
+                        <span>{{ app.models|length }} jenis data</span>
+                    </div>
+                </div>
+
+                <div class="pcm-data-grid">
+
+                    {% for model in app.models %}
+                        {% model_count app.app_label model.object_name as total_data %}
+
+                        <article class="pcm-data-card">
+
+                            <div class="pcm-data-card-top">
+                                <div class="pcm-data-icon">
+                                    {% if model.object_name == "Berita" %}
+                                        <span>▤</span>
+                                    {% elif model.object_name == "Agenda" %}
+                                        <span>▦</span>
+                                    {% elif model.object_name == "Pimpinan" %}
+                                        <span>♙</span>
+                                    {% elif model.object_name == "Ranting" %}
+                                        <span>⌘</span>
+                                    {% elif model.object_name == "AmalUsaha" %}
+                                        <span>▣</span>
+                                    {% elif model.object_name == "Dokumen" %}
+                                        <span>▤</span>
+                                    {% elif model.object_name == "FotoKondisi" %}
+                                        <span>▧</span>
+                                    {% elif model.object_name == "PesanMasuk" %}
+                                        <span>✉</span>
+                                    {% else %}
+                                        <span>◈</span>
+                                    {% endif %}
+                                </div>
+
+                                <span class="pcm-data-label">Total Data</span>
+                            </div>
+
+                            <div class="pcm-data-count">
+                                {{ total_data }}
+                            </div>
+
+                            <h4>{{ model.name }}</h4>
+
+                            <div class="pcm-data-actions">
+                                {% if model.admin_url %}
+                                    <a href="{{ model.admin_url }}">
+                                        Kelola Data →
+                                    </a>
+                                {% endif %}
+
+                                {% if model.add_url %}
+                                    <a class="pcm-data-add"
+                                       href="{{ model.add_url }}">
+                                        + Tambah
+                                    </a>
+                                {% endif %}
+                            </div>
+
+                        </article>
+                    {% endfor %}
+
+                </div>
+            </div>
+        {% empty %}
+            <p>Belum ada data yang dapat dikelola.</p>
+        {% endfor %}
+
+    </section>
+
+    <!-- RECENT ACTIVITY -->
+    <section class="pcm-activity-card">
+        <div class="pcm-activity-heading">
+            <div>
+                <h2>Aktivitas Terbaru</h2>
+                <p>Riwayat perubahan data oleh akun kamu.</p>
+            </div>
+            <span class="pcm-activity-label">Aktivitas saya</span>
+        </div>
+
+        {% get_admin_log 8 as admin_log for_user user %}
+
+        {% if admin_log %}
+            <div class="pcm-activity-list">
+                {% for entry in admin_log %}
+                    <div class="pcm-activity-item">
+
+                        <div class="pcm-activity-icon">
+                            {% if entry.is_addition %}
+                                +
+                            {% elif entry.is_change %}
+                                ✎
+                            {% else %}
+                                −
+                            {% endif %}
+                        </div>
+
+                        <div class="pcm-activity-info">
+                            <div class="pcm-activity-title">
+                                {% if entry.is_deletion or not entry.get_admin_url %}
+                                    {{ entry.object_repr }}
+                                {% else %}
+                                    <a href="{{ entry.get_admin_url }}">
+                                        {{ entry.object_repr }}
+                                    </a>
+                                {% endif %}
+                            </div>
+
+                            <div class="pcm-activity-description">
+                                {{ entry.content_type.name|default:"Data" }}
+                                · {{ entry.action_time|date:"d M Y, H:i" }}
+                            </div>
+                        </div>
+
+                        <span class="pcm-activity-status">
+                            {{ entry.get_action_flag_display }}
+                        </span>
+
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="pcm-empty-activity">
+                Belum ada aktivitas yang tercatat.
+            </div>
+        {% endif %}
+    </section>
+
+    <footer class="pcm-dashboard-footer">
+        Administrasi Website PCM Gemolong
+    </footer>
+
+</div>
+
+{% endblock %}

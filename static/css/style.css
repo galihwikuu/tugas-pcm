@@ -93,32 +93,122 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.15);
 }
 
-/* Tampilan HP */
+/* FIX FINAL: POSISI BRAND DAN HAMBURGER MOBILE */
 @media (max-width: 991.98px) {
-  .brand-logo {
-    width: 44px;
-    height: 44px;
-  }
+    .navbar-pcm > .container,
+    .navbar-pcm > .container-fluid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
 
-  .brand-title {
-    font-size: 0.98rem;
-  }
+    /* Brand di sebelah kiri */
+    .navbar-pcm .brand-pcm {
+        display: inline-flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex: 0 1 auto !important;
+        min-width: 0;
+        margin-right: auto !important;
+        gap: 10px;
+    }
 
-  .brand-tagline {
-    font-size: 0.68rem;
-  }
+    /* Hamburger di paling kanan */
+    .navbar-pcm .navbar-toggler {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+        order: 2;
+    }
 
-  .navbar-pcm .navbar-collapse {
-    padding-top: 1rem;
-  }
+    /* Menu turun ke baris berikutnya */
+    .navbar-pcm .navbar-collapse {
+        flex: 0 0 100% !important;
+        width: 100%;
+        order: 3;
+    }
 
-  .navbar-pcm .navbar-nav {
-    gap: 2px;
-  }
+    .navbar-pcm .brand-logo {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
 
-  .navbar-pcm .nav-link {
-    padding: 0.7rem 0.85rem;
-  }
+    .navbar-pcm .brand-text {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .navbar-pcm .brand-title {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .navbar-pcm .brand-tagline {
+        font-size: 0.62rem;
+    }
+}
+
+/* RESPONSIVE NAVBAR MOBILE */
+@media (max-width: 991.98px) {
+    .navbar-pcm > .container,
+    .navbar-pcm > .container-fluid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+    }
+
+    /* Brand sebelah kiri */
+    .navbar-pcm .brand-pcm {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex: 1 1 0 !important;
+        min-width: 0;
+        max-width: calc(100% - 55px);
+        margin: 0 auto 0 0 !important;
+        gap: 8px;
+    }
+
+    .navbar-pcm .brand-logo {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+    }
+
+    .navbar-pcm .brand-text {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .navbar-pcm .brand-title {
+        font-size: clamp(0.78rem, 3.2vw, 0.95rem);
+        line-height: 1.15;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .navbar-pcm .brand-tagline {
+        font-size: clamp(0.58rem, 2.3vw, 0.65rem);
+        line-height: 1.2;
+    }
+
+    /* Hamburger sebelah kanan */
+    .navbar-pcm .navbar-toggler {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+    }
+
+    /* Menu navigasi */
+    .navbar-pcm .navbar-collapse {
+        flex: 0 0 100%;
+        width: 100%;
+        order: 3;
+    }
 }
 
 /* HERO */
@@ -339,6 +429,13 @@ body {
     margin-bottom: 12px;
 }
 
+.footer-logo-lazismu {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 
 @media (max-width: 767.98px) {
   .stat-wrap {
@@ -374,6 +471,236 @@ body {
 .stat-card {
     cursor: pointer;
 }
+
+/* ===== CAROUSEL PIMPINAN ===== */
+
+.section-pimpinan {
+    overflow: hidden;
+    background: #f8faf9;
+}
+
+.pimpinan-subtitle {
+    color: #079447;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.pimpinan-heading {
+    color: #17406f;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.pimpinan-description {
+    color: #6c757d;
+    font-size: .95rem;
+}
+
+.pimpinan-carousel-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.pimpinan-carousel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    padding: 35px calc(50% - 140px);
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.pimpinan-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.pimpinan-slide {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+    transform: scale(.82);
+    opacity: .6;
+    transition: transform .3s ease, opacity .3s ease;
+    will-change: transform;
+}
+
+.pimpinan-slide.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.pimpinan-card {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .10);
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.pimpinan-foto-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #e9f2ed;
+}
+
+.pimpinan-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.pimpinan-no-foto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #079447;
+    font-size: 5rem;
+}
+
+.pimpinan-info {
+    padding: 20px 15px 23px;
+    text-align: center;
+}
+
+.pimpinan-info h3 {
+    color: #17406f;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pimpinan-jabatan {
+    display: block;
+    color: #079447;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.pimpinan-periode {
+    display: block;
+    margin-top: 7px;
+    color: #888;
+    font-size: .8rem;
+}
+
+.pimpinan-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #079447;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+.pimpinan-prev {
+    left: 5px;
+}
+
+.pimpinan-next {
+    right: 5px;
+}
+
+.pimpinan-nav:hover {
+    background: #126b68;
+}
+
+.pimpinan-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+.pimpinan-dot {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: #cbd5d0;
+    padding: 0;
+}
+
+.pimpinan-dot.active {
+    width: 22px;
+    border-radius: 10px;
+    background: #079447;
+}
+
+.btn-pimpinan {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 22px;
+    border-radius: 30px;
+    background: #079447;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.btn-pimpinan:hover {
+    background: #126b68;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.pimpinan-nav,
+.pimpinan-indicators {
+    display: none;
+}
+
+.pimpinan-carousel.hovering {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+@media (max-width: 767.98px) {
+    .pimpinan-heading {
+        font-size: 1.6rem;
+    }
+
+    .pimpinan-carousel {
+        gap: 12px;
+        padding: 25px calc(50% - 125px);
+    }
+
+    .pimpinan-slide {
+        flex-basis: 250px;
+    }
+
+    .pimpinan-foto-wrapper {
+        height: 270px;
+    }
+
+    .pimpinan-nav {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+}
+
+
 
 /* Efek hover card berita beranda */
 /* Hover tombol berita */
@@ -541,10 +868,9 @@ body {
 
 
 /* Tautan Cepat */
+/* Tautan Cepat */
 .footer-quick-links {
     padding-left: 24px;
-    position: relative;
-    left: 50px;
 }
 
 .footer-links {
@@ -661,6 +987,21 @@ body {
     align-items: center;
     gap: 12px;
   }
+  .footer-quick-links {
+    position: static;
+    left: auto;
+    padding-left: 12px;
+    text-align: left;
+    }
+
+    .footer-quick-links .footer-heading {
+        text-align: left;
+    }
+
+    .footer-quick-links .footer-links {
+        text-align: left;
+        padding-left: 0;
+    }
 }
 
 

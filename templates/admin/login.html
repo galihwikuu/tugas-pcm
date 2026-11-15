@@ -1,0 +1,77 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block bodyclass %}login{% endblock %}
+
+{% block content_title %}{% endblock %}
+{% block content %}
+<div class="pcm-login-page">
+
+    <div class="pcm-login-left">
+        <div class="pcm-login-brand">
+            <img src="{% static 'img/logo-muhammadiyah.png' %}" alt="Logo PCM Gemolong">
+
+            <span>PIMPINAN CABANG MUHAMMADIYAH</span>
+            <h1>PCM Gemolong</h1>
+
+            <div class="pcm-gold-line"></div>
+
+            <p>
+                Mewujudkan pelayanan organisasi yang modern,
+                informatif, dan terintegrasi melalui teknologi digital.
+            </p>
+        </div>
+
+        <div class="pcm-login-left-footer">
+            © PCM Gemolong
+        </div>
+    </div>
+
+    <div class="pcm-login-right">
+        <div class="pcm-login-form-wrapper">
+
+            <div class="pcm-login-heading">
+                <span>ADMINISTRASI WEBSITE</span>
+                <h2>Selamat Datang</h2>
+                <p>Silakan masuk menggunakan akun administrator Anda.</p>
+            </div>
+
+            {% if form.errors %}
+                <div class="pcm-login-error">
+                    Username atau password yang dimasukkan salah.
+                </div>
+            {% endif %}
+
+            <form action="{{ app_path }}" method="post" id="login-form">
+                {% csrf_token %}
+
+                <input type="hidden" name="next" value="{{ next }}">
+
+                <div class="pcm-login-field">
+                    <label for="{{ form.username.id_for_label }}">Username</label>
+                    {{ form.username }}
+                </div>
+
+                <div class="pcm-login-field">
+                    <label for="{{ form.password.id_for_label }}">Password</label>
+                    {{ form.password }}
+                </div>
+
+                <button type="submit" class="pcm-login-button">
+                    Masuk ke Dashboard
+                    <span>→</span>
+                </button>
+                <a href="{% url 'pcm:beranda' %}" class="pcm-back-website">
+                    ← Kembali ke Website
+                </a>
+            </form>
+
+            <div class="pcm-login-form-footer">
+                © PCM Gemolong · Administrasi Website
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

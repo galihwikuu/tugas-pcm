@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from django.db.models import Max
 
 class ProfilOrganisasi(models.Model):
     nama = models.CharField(max_length=200)
@@ -54,6 +55,14 @@ class Pimpinan(models.Model):
 
     def __str__(self):
         return f"{self.nama} ({self.jabatan})"
+    
+    def save(self, *args, **kwargs):
+        if self._state.adding and not self.urutan:
+            maks = Pimpinan.objects.aggregate(m=Max("urutan"))["m"] or 0
+            self.urutan = maks + 1
+        super().save(*args, **kwargs)
+
+    
 
 
 class Ranting(models.Model):
