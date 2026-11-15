@@ -512,10 +512,17 @@ body {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
-    padding: 35px calc(50% - 140px);
+    padding: 35px 0;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
+    
+}
+
+.pimpinan-carousel::before,
+.pimpinan-carousel::after {
+    content: "";
+    flex: 0 0 calc(50% - 140px - 20px);
 }
 
 .pimpinan-carousel::-webkit-scrollbar {
@@ -531,6 +538,7 @@ body {
     opacity: .6;
     transition: transform .3s ease, opacity .3s ease;
     will-change: transform;
+    transition: transform .6s cubic-bezier(.22, 1, .36, 1), opacity .6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .pimpinan-slide.active {
@@ -675,6 +683,11 @@ body {
     scroll-behavior: auto;
 }
 
+.pimpinan-carousel.animating {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
 @media (max-width: 767.98px) {
     .pimpinan-heading {
         font-size: 1.6rem;
@@ -682,7 +695,12 @@ body {
 
     .pimpinan-carousel {
         gap: 12px;
-        padding: 25px calc(50% - 125px);
+        padding: 25px;
+    }
+
+    .pimpinan-carousel::before, 
+    .pimpinan-carousel::after {
+        flex-basis: calc(50% - 125px - 12px);
     }
 
     .pimpinan-slide {
@@ -697,6 +715,34 @@ body {
         width: 34px;
         height: 34px;
         font-size: 1rem;
+    }
+}
+
+/* UKURAN CARD MOBILE */
+@media (max-width: 767.98px) {
+    .pimpinan-carousel {
+        gap: 10px;
+        padding: 20px calc(50% - 105px);
+    }
+
+    .pimpinan-slide {
+        flex-basis: 210px;
+    }
+
+    .pimpinan-foto-wrapper {
+        height: 220px;
+    }
+
+    .pimpinan-info h3 {
+        font-size: .95rem;
+    }
+
+    .pimpinan-jabatan {
+        font-size: .8rem;
+    }
+
+    .pimpinan-periode {
+        font-size: .72rem;
     }
 }
 
