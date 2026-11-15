@@ -1,0 +1,22 @@
+
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: pcm_gemolong_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pcm_gemolong
+      POSTGRES_USER: pcm_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pcm_user -d pcm_gemolong"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
