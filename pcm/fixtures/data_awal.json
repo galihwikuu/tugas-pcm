@@ -1,17 +1,272 @@
 [
 {
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$YDNzRtI98NJS01ZizUPPam$cpN1w3Zs5mj6qwxpR4X/6T3dLRa9a1nGrWKyHGY4NZA=",
+    "last_login": "2026-11-15T06:23:16.004Z",
+    "is_superuser": true,
+    "username": "galihwikuu",
+    "first_name": "",
+    "last_name": "",
+    "email": "galihwiku123456@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-20T15:25:39.064Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$kpm7wlRruXSOH9dEUj5iEM$kdPmoHtr6EHFxt8XS84+T3FJf5LNOG5gTPf7StLtiFs=",
+    "last_login": "2026-11-03T13:45:29.691Z",
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "PCM",
+    "email": "admin@pcm.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-11-03T10:54:46Z",
+    "groups": [],
+    "user_permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_agenda",
+        "pcm",
+        "agenda"
+      ],
+      [
+        "change_agenda",
+        "pcm",
+        "agenda"
+      ],
+      [
+        "delete_agenda",
+        "pcm",
+        "agenda"
+      ],
+      [
+        "view_agenda",
+        "pcm",
+        "agenda"
+      ],
+      [
+        "add_amalusaha",
+        "pcm",
+        "amalusaha"
+      ],
+      [
+        "change_amalusaha",
+        "pcm",
+        "amalusaha"
+      ],
+      [
+        "delete_amalusaha",
+        "pcm",
+        "amalusaha"
+      ],
+      [
+        "view_amalusaha",
+        "pcm",
+        "amalusaha"
+      ],
+      [
+        "add_berita",
+        "pcm",
+        "berita"
+      ],
+      [
+        "change_berita",
+        "pcm",
+        "berita"
+      ],
+      [
+        "delete_berita",
+        "pcm",
+        "berita"
+      ],
+      [
+        "view_berita",
+        "pcm",
+        "berita"
+      ],
+      [
+        "add_fotokondisi",
+        "pcm",
+        "fotokondisi"
+      ],
+      [
+        "change_fotokondisi",
+        "pcm",
+        "fotokondisi"
+      ],
+      [
+        "delete_fotokondisi",
+        "pcm",
+        "fotokondisi"
+      ],
+      [
+        "view_fotokondisi",
+        "pcm",
+        "fotokondisi"
+      ],
+      [
+        "add_pesanmasuk",
+        "pcm",
+        "pesanmasuk"
+      ],
+      [
+        "change_pesanmasuk",
+        "pcm",
+        "pesanmasuk"
+      ],
+      [
+        "delete_pesanmasuk",
+        "pcm",
+        "pesanmasuk"
+      ],
+      [
+        "view_pesanmasuk",
+        "pcm",
+        "pesanmasuk"
+      ],
+      [
+        "add_pimpinan",
+        "pcm",
+        "pimpinan"
+      ],
+      [
+        "change_pimpinan",
+        "pcm",
+        "pimpinan"
+      ],
+      [
+        "delete_pimpinan",
+        "pcm",
+        "pimpinan"
+      ],
+      [
+        "view_pimpinan",
+        "pcm",
+        "pimpinan"
+      ],
+      [
+        "add_profilorganisasi",
+        "pcm",
+        "profilorganisasi"
+      ],
+      [
+        "change_profilorganisasi",
+        "pcm",
+        "profilorganisasi"
+      ],
+      [
+        "delete_profilorganisasi",
+        "pcm",
+        "profilorganisasi"
+      ],
+      [
+        "view_profilorganisasi",
+        "pcm",
+        "profilorganisasi"
+      ],
+      [
+        "add_ranting",
+        "pcm",
+        "ranting"
+      ],
+      [
+        "change_ranting",
+        "pcm",
+        "ranting"
+      ],
+      [
+        "delete_ranting",
+        "pcm",
+        "ranting"
+      ],
+      [
+        "view_ranting",
+        "pcm",
+        "ranting"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ]
+    ]
+  }
+},
+{
   "model": "pcm.profilorganisasi",
   "pk": 1,
   "fields": {
-    "nama": "Pimpinan Cabang Muhammadiyah Ceper",
-    "nama_singkat": "PCM Ceper",
-    "tagline": "Meneguhkan Islam Berkemajuan, Mencerahkan Kabupaten Klaten",
+    "nama": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "nama_singkat": "PCM Gemolong",
+    "tagline": "Meneguhkan Islam Berkemajuan, Mencerahkan Kabupaten Sragen",
     "tentang": "Pimpinan Cabang Muhammadiyah Gemolong adalah wadah gerakan dakwah amar ma'ruf nahi munkar di bawah Pimpinan Daerah Muhammadiyah (PDM) Kabupaten Sragen, yang berkedudukan di wilayah Kecamatan Gemolong, Kabupaten Sragen, Jawa Tengah. Berkomitmen dalam membina umat melalui bidang pendidikan, kesehatan, sosial, dan ekonomi keagamaan.",
     "sejarah": "PCM Gemolong berdiri atas dasar kesadaran berorganisasi dan berdakwah persyarikatan Muhammadiyah untuk merespons kebutuhan umat di wilayah Gemolong dan sekitarnya sejak puluhan tahun lalu, terus berkembang dengan mendirikan berbagai amal usaha dari tingkat ranting hingga cabang.",
     "visi": "Terwujudnya masyarakat Islam yang sebenar-benarnya di wilayah Gemolong yang berkemajuan.",
     "misi": "Meningkatkan kualitas pembinaan keislaman, keimanan, dan ketaatan beragama warga persyarikatan dan masyarakat.\r\nMengembangkan kualitas pelayanan pendidikan formal dan non-formal yang unggul dan berkemajuan.\r\nMemperkuat pelayanan sosial, kesehatan, dan pemberdayaan ekonomi umat.\r\nMeningkatkan tata kelola organisasi (tertib administrasi dan keuangan) serta penguatan ukhuwah islamiyah.",
-    "alamat_sekretariat": "Jl. Raya Gemolong - Sragen Km. 1, Gemolong, Sragen, Jawa Tengah 57274",
-    "telepon": "(0271) 681xxxx / 08122xxxxxxx",
+    "alamat_sekretariat": "Dusun 1, Gemolong, Kec. Gemolong, Kabupaten Sragen, Jawa Tengah 50274, Indonesia",
+    "telepon": "0812-2626-2911",
     "email": "pcm.gemolong@gmail.com",
     "jumlah_anggota_ktam": 1250,
     "gambar_utama": "profil/Foto-Web-News-UMS_SbVDFn1.zip-fotoweb-2-6.jpeg"
@@ -21,35 +276,26 @@
   "model": "pcm.fotokondisi",
   "pk": 1,
   "fields": {
-    "gambar": "profil/kondisi/unnamed_2.webp",
+    "gambar": "profil/kondisi/084531400_1674030831-IMG-20220605-WA0000.webp",
     "keterangan": "",
     "urutan": 0
   }
 },
 {
   "model": "pcm.fotokondisi",
-  "pk": 2,
+  "pk": 5,
   "fields": {
-    "gambar": "profil/kondisi/unnamed_1.webp",
+    "gambar": "profil/kondisi/084531400_1674030831-IMG-20220605-WA0000_bRzuDWL.webp",
     "keterangan": "",
     "urutan": 0
   }
 },
 {
   "model": "pcm.fotokondisi",
-  "pk": 3,
+  "pk": 6,
   "fields": {
-    "gambar": "profil/kondisi/IMG_9625.jpeg",
-    "keterangan": "Khitanan Massal",
-    "urutan": 1
-  }
-},
-{
-  "model": "pcm.fotokondisi",
-  "pk": 4,
-  "fields": {
-    "gambar": "profil/kondisi/1000017247_1R6vYCa.jpg",
-    "keterangan": "TokoMU",
+    "gambar": "profil/kondisi/084531400_1674030831-IMG-20220605-WA0000_zUxDZa8.webp",
+    "keterangan": "",
     "urutan": 0
   }
 },
@@ -57,11 +303,55 @@
   "model": "pcm.pimpinan",
   "pk": 1,
   "fields": {
-    "nama": "Galih Wiku Dhamar Aji",
+    "nama": "Drs. Joko Margiantomo, M.Pd.",
     "jabatan": "Ketua Ranting",
     "periode": "2026-2030",
     "foto": "",
     "urutan": 0
+  }
+},
+{
+  "model": "pcm.pimpinan",
+  "pk": 3,
+  "fields": {
+    "nama": "Muslih, S.Pd., M.Pd.",
+    "jabatan": "Sekretaris",
+    "periode": "2026-2030",
+    "foto": "",
+    "urutan": 1
+  }
+},
+{
+  "model": "pcm.pimpinan",
+  "pk": 4,
+  "fields": {
+    "nama": "Agus Ali Johar, S.E.",
+    "jabatan": "Bendahara",
+    "periode": "2024=2026",
+    "foto": "",
+    "urutan": 2
+  }
+},
+{
+  "model": "pcm.pimpinan",
+  "pk": 6,
+  "fields": {
+    "nama": "galihwikuu",
+    "jabatan": "anggota",
+    "periode": "2022-2022",
+    "foto": "",
+    "urutan": 3
+  }
+},
+{
+  "model": "pcm.pimpinan",
+  "pk": 7,
+  "fields": {
+    "nama": "temmy",
+    "jabatan": "jojsis",
+    "periode": "2026-20202",
+    "foto": "",
+    "urutan": 4
   }
 },
 {
@@ -70,7 +360,7 @@
   "fields": {
     "nama": "PRM Gemolong 1",
     "ketua": "",
-    "alamat": "Gemolong Sragen",
+    "alamat": "",
     "telepon": ""
   }
 },
@@ -79,9 +369,109 @@
   "pk": 2,
   "fields": {
     "nama": "PRM Gemolong 2",
-    "ketua": "wikukwikukk",
-    "alamat": "Oro oro dowo Gemolong, Sragen",
-    "telepon": "085642361510"
+    "ketua": "",
+    "alamat": "",
+    "telepon": "0888888888"
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 3,
+  "fields": {
+    "nama": "PRM Geneng Duwur",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 4,
+  "fields": {
+    "nama": "PRM Jenalas",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 5,
+  "fields": {
+    "nama": "PRM Kwangen",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 6,
+  "fields": {
+    "nama": "PRM Ngembat Padas 1",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 7,
+  "fields": {
+    "nama": "PRM Ngembat Padas 2",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 8,
+  "fields": {
+    "nama": "PRM Kalangan",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 9,
+  "fields": {
+    "nama": "PRM Keragilan",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 10,
+  "fields": {
+    "nama": "PRM Jatibatur",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 11,
+  "fields": {
+    "nama": "PRM Tegaldowo",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
+  }
+},
+{
+  "model": "pcm.ranting",
+  "pk": 12,
+  "fields": {
+    "nama": "PRM Nganti",
+    "ketua": "",
+    "alamat": "",
+    "telepon": ""
   }
 },
 {
@@ -115,6 +505,61 @@
     "deskripsi": "Madrasah Tsanawiyah (setingkat SMP) yang memiliki sejarah panjang dalam mencetak kader-kader muda persyarikatan di Gemolong. Madrasah ini mengintegrasikan pendidikan umum dan agama secara seimbang, serta diperkuat oleh berbagai kegiatan ekstrakurikuler kepanduan Hizbul Wathan (HW) dan Ikatan Pelajar Muhammadiyah (IPM).",
     "alamat": "Kabayanan II, Kel. Kragilan, Kec. Gemolong, Kabupaten Sragen, Jawa Tengah 57274.",
     "gambar": "amal_usaha/unnamed_1_YwnyJK8.webp"
+  }
+},
+{
+  "model": "pcm.amalusaha",
+  "pk": 4,
+  "fields": {
+    "nama": "Klinik Pratama Rawat Inap PKU Muhammadiyah Gemolong",
+    "bidang": "kesehatan",
+    "deskripsi": "Klinik Pratama Rawat Inap PKU Muhammadiyah Gemolong merupakan salah satu Amal Usaha Muhammadiyah (AUM) di bidang kesehatan yang menyediakan pelayanan kesehatan bagi masyarakat di wilayah Gemolong dan sekitarnya. Klinik ini menjadi bagian dari upaya Muhammadiyah dalam meningkatkan kualitas kesehatan masyarakat melalui pelayanan medis yang profesional dan berorientasi pada kebutuhan pasien.",
+    "alamat": "Kwangen Kidul, Ngembat Padas, Kecamatan Gemolong, Kabupaten Sragen, Jawa Tengah.",
+    "gambar": ""
+  }
+},
+{
+  "model": "pcm.amalusaha",
+  "pk": 5,
+  "fields": {
+    "nama": "LAZISMU Kantor Layanan Gemolong",
+    "bidang": "sosial",
+    "deskripsi": "LAZISMU Gemolong merupakan lembaga pengelola zakat, infak, dan sedekah yang berperan menghimpun serta menyalurkan dana masyarakat untuk membantu kaum dhuafa dan masyarakat yang membutuhkan. Kegiatannya mencakup bantuan sosial, kemanusiaan, pendidikan, kesehatan, dan pemberdayaan ekonomi.",
+    "alamat": "",
+    "gambar": ""
+  }
+},
+{
+  "model": "pcm.amalusaha",
+  "pk": 6,
+  "fields": {
+    "nama": "Khitanan Massal Gratis",
+    "bidang": "sosial",
+    "deskripsi": "Khitanan massal merupakan kegiatan sosial yang diselenggarakan untuk membantu masyarakat dalam memperoleh pelayanan khitan secara gratis. Kegiatan ini menjadi salah satu bentuk kepedulian Muhammadiyah terhadap kesehatan anak dan kesejahteraan keluarga.\r\n\r\nPada kegiatan tahun 2024, tercatat sebanyak 135 anak mengikuti program tersebut.",
+    "alamat": "",
+    "gambar": "amal_usaha/Gambar-WhatsApp-2024-06-30-pukul-15.18.13_3b16425a-780x470.jpg"
+  }
+},
+{
+  "model": "pcm.amalusaha",
+  "pk": 7,
+  "fields": {
+    "nama": "Bakti Sosial Aisyiyah",
+    "bidang": "sosial",
+    "deskripsi": "Aisyiyah melalui kegiatan sosial kemasyarakatan turut berperan membantu masyarakat yang mengalami kesulitan. Salah satu bentuk kegiatannya adalah penyaluran bantuan air bersih kepada masyarakat yang terdampak kekeringan di wilayah sekitar Sragen",
+    "alamat": "",
+    "gambar": ""
+  }
+},
+{
+  "model": "pcm.amalusaha",
+  "pk": 8,
+  "fields": {
+    "nama": "Baitut Tamwil Muhammadiyah (BTM) Gemolong",
+    "bidang": "ekonomi",
+    "deskripsi": "BTM Gemolong merupakan lembaga keuangan mikro berbasis syariah yang berperan dalam mengembangkan perekonomian masyarakat. BTM menyediakan layanan simpanan dan pembiayaan berdasarkan prinsip syariah untuk membantu kebutuhan keuangan anggota serta mendukung pengembangan usaha kecil dan menengah.",
+    "alamat": "Jl. Gemolong–Kacangan No. 146, Gemolong, Sragen.",
+    "gambar": ""
   }
 },
 {
@@ -158,22 +603,2010 @@
 },
 {
   "model": "pcm.agenda",
-  "pk": 1,
-  "fields": {
-    "nama_kegiatan": "Makan Makan",
-    "waktu_mulai": "2026-10-20T17:00:00Z",
-    "tempat": "Sdr Galih",
-    "keterangan": "jangan lupa"
-  }
-},
-{
-  "model": "pcm.agenda",
   "pk": 2,
   "fields": {
     "nama_kegiatan": "Pengajian Rutin Ahad Pagi PCM Gemolong",
-    "waktu_mulai": "2026-10-30T11:00:00Z",
+    "waktu_mulai": "2026-11-19T11:00:00Z",
     "tempat": "Masjid At-Taqwa PCM Gemolong",
     "keterangan": "Pembicara: Dr. H. Muh. In'am Esha, M.Ag. Tema: \"Meneguhkan Islam Berkemajuan di Era Digital\". Terbuka untuk seluruh warga persyarikatan dan masyarakat umum."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-10-21T12:19:14.463Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "agenda"
+    ],
+    "object_id": "1",
+    "object_repr": "Makan Makan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-10-21T12:30:06.605Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Galih Wiku Dhamar Aji (Ketua Ranting)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-10-21T13:06:19.074Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-10-21T13:09:58.355Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "agenda"
+    ],
+    "object_id": "2",
+    "object_repr": "Pengajian Rutin Ahad Pagi PCM Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-10-21T13:15:48.862Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "1",
+    "object_repr": "PCM Gemolong Selenggarakan Penganjian Akbar dan Peresmian Layanan Sosial Terpadu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-10-21T13:47:25.842Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Lazismu Sragen Gelar Rakor Evaluasi Ramadhan 1447 H, Target Zakat Lampaui Capaian",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-10-21T13:50:35.344Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal oleh Pemuda Muhammadiyah Gemolong: Tradisi Kebaikan Sejak 1988",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-10-21T13:51:27.685Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal oleh Pemuda Muhammadiyah Gemolong: Tradisi Kebaikan Sejak 1988",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-10-21T13:51:45.796Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal oleh Pemuda Muhammadiyah Gemolong: Tradisi Kebaikan Sejak 1988",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar sampul\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-10-21T13:58:17.824Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "1",
+    "object_repr": "TokoMU Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-10-21T14:00:43.467Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "1",
+    "object_repr": "PRM Gemolong 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-10-21T14:03:45.798Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "1",
+    "object_repr": "PCM Gemolong Selenggarakan Penganjian Akbar dan Peresmian Layanan Sosial Terpadu",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-10-21T14:04:54.685Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "4",
+    "object_repr": "LAZISMU Gemolong Terima Penghargaan Capaian Program Qurbanmu 2025 Tertinggi se-Kabupaten Sragen",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-10-21T14:11:12.557Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Lazismu Sragen Gelar Rakor Evaluasi Ramadhan 1447 H, Target Zakat Lampaui Capaian",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ringkasan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-10-21T14:12:08.393Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Lazismu Sragen Gelar Rakor Evaluasi Ramadhan 1447 H, Target Zakat Lampaui Capaian",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ringkasan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-10-21T14:18:59.973Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "2",
+    "object_repr": "SD Aisyah Unggulan Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-10-21T14:22:33.012Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "3",
+    "object_repr": "MTS Muhammadiyah 1 Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-10-21T14:22:58.392Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "2",
+    "object_repr": "SD Aisyah Unggulan Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bidang\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-10-22T13:42:29.463Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\", \"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-10-22T13:42:44.333Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tagline\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-10-22T14:36:21.104Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar utama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-10-22T14:36:33.769Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "1",
+    "object_repr": "TokoMU Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-10-22T14:36:41.808Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "3",
+    "object_repr": "MTS Muhammadiyah 1 Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-10-22T14:36:49.694Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "2",
+    "object_repr": "SD Aisyah Unggulan Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-10-22T14:37:07.691Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Lazismu Sragen Gelar Rakor Evaluasi Ramadhan 1447 H, Target Zakat Lampaui Capaian",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar sampul\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-10-22T14:37:20.008Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "4",
+    "object_repr": "LAZISMU Gemolong Terima Penghargaan Capaian Program Qurbanmu 2025 Tertinggi se-Kabupaten Sragen",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar sampul\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-10-22T14:37:28.584Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal oleh Pemuda Muhammadiyah Gemolong: Tradisi Kebaikan Sejak 1988",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar sampul\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-10-22T14:38:32.763Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Misi\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-10-22T14:38:43.029Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-10-22T15:18:44.669Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-10-22T15:19:03.281Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-10-22T15:19:08.029Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-10-22T15:19:11.409Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-10-22T15:19:50.703Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-10-22T15:36:35.396Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar utama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-10-22T15:39:06.337Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar utama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-10-22T15:43:53.572Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar utama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-10-22T15:44:05.966Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Ceper",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar utama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-10-23T04:15:49.076Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "1",
+    "object_repr": "Foto kondisi #1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-10-23T04:16:29.547Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "2",
+    "object_repr": "Foto kondisi #2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-10-23T04:45:52.267Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "2",
+    "object_repr": "Foto kondisi #2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-10-23T04:47:02.382Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-10-23T04:47:46.157Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-10-23T04:57:13.268Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-10-23T04:59:38.409Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "4",
+    "object_repr": "TokoMU",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-10-23T04:59:48.489Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-10-23T05:05:05.448Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "2",
+    "object_repr": "PRM Gemolong 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-10-23T05:13:56.394Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "5",
+    "object_repr": "dahdhadhadh",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-10-23T05:15:09.067Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "5",
+    "object_repr": "dahdhadhadh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-10-23T05:15:39.426Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "5",
+    "object_repr": "dahdhadhadh",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-11-03T09:46:34.940Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\", \"Nama singkat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-11-03T09:46:48.497Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tagline\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-11-03T09:57:31.225Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "agenda"
+    ],
+    "object_id": "1",
+    "object_repr": "Makan Makan",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-11-03T09:57:50.352Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "agenda"
+    ],
+    "object_id": "2",
+    "object_repr": "Pengajian Rutin Ahad Pagi PCM Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Waktu mulai\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-11-03T09:58:21.775Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Galih (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-11-03T09:59:23.965Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Ahmad Dahlan (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-11-03T09:59:52.917Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "3",
+    "object_repr": "Khitanan Massal",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-11-03T09:59:56.798Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "4",
+    "object_repr": "TokoMU",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-11-03T09:59:59.667Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "2",
+    "object_repr": "Foto kondisi #2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-11-03T10:03:31.093Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "1",
+    "object_repr": "Foto kondisi #1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-11-03T10:03:40.659Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "5",
+    "object_repr": "Foto kondisi #5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-11-03T10:03:50.897Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "6",
+    "object_repr": "Foto kondisi #6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-11-03T10:04:46.932Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "2",
+    "object_repr": "PRM Gemolong 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ketua\", \"Telepon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-11-03T10:54:47.351Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-11-03T10:56:47.959Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-11-03T12:10:53.530Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "2",
+    "object_repr": "Galih Wiku Dhamar Aji (Seketaris)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-11-03T12:13:30.133Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "2",
+    "object_repr": "Galih Wiku Dhamar Aji (Seketaris)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-11-03T12:57:37.751Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "7",
+    "object_repr": "Foto kondisi #7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-11-03T13:02:19.623Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "fotokondisi"
+    ],
+    "object_id": "7",
+    "object_repr": "Foto kondisi #7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-11-03T16:43:04.731Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Alamat sekretariat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-11-03T16:44:29.608Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Drs. Joko Margiantomo (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-11-03T16:45:03.289Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "3",
+    "object_repr": "Muslih, S.Pd., M.Pd. (Sekretaris)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-11-03T16:45:19.202Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "4",
+    "object_repr": "Agus Ali Johar, S.E. (Bendahara)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-11-03T16:47:10.719Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "3",
+    "object_repr": "PRM Geneng Duwur",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-11-03T16:47:22.825Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "4",
+    "object_repr": "PRM Jenalas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-11-03T16:47:32.628Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "5",
+    "object_repr": "PRM Kwangen",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-11-03T16:47:45.265Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "6",
+    "object_repr": "PRM Ngembat Padas 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-11-03T16:47:54.740Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "7",
+    "object_repr": "PRM Ngembat Padas 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-11-03T16:48:03.258Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "8",
+    "object_repr": "PRM Kalangan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-11-03T16:48:09.735Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "9",
+    "object_repr": "PRM Keragilan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-11-03T16:48:21.430Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "10",
+    "object_repr": "PRM Jatibatur",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-11-03T16:48:29.981Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "11",
+    "object_repr": "PRM Tegaldowo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-11-03T16:48:37.750Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "12",
+    "object_repr": "PRM Nganti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-11-03T16:50:34.199Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Drs. Joko Margiantomo, M.Pd. (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nama\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-11-03T16:53:20.219Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "4",
+    "object_repr": "Klinik Pratama Rawat Inap PKU Muhammadiyah Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-11-03T16:56:05.708Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "5",
+    "object_repr": "LAZISMU Kantor Layanan Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-11-03T16:56:36.040Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "6",
+    "object_repr": "Khitanan Massal Gratis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-11-03T16:56:48.546Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "7",
+    "object_repr": "Bakti Sosial Aisyiyah",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-11-03T16:57:32.458Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "5",
+    "object_repr": "LAZISMU Kantor Layanan Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Deskripsi\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-11-03T16:58:14.090Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "6",
+    "object_repr": "Khitanan Massal Gratis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Deskripsi\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-11-03T16:58:32.693Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "6",
+    "object_repr": "Khitanan Massal Gratis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-11-03T16:58:52.944Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "7",
+    "object_repr": "Bakti Sosial Aisyiyah",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Deskripsi\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-11-03T17:00:17.674Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "amalusaha"
+    ],
+    "object_id": "8",
+    "object_repr": "Baitut Tamwil Muhammadiyah (BTM) Gemolong",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-11-03T17:01:11.320Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "1",
+    "object_repr": "PRM Gemolong 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Alamat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-11-03T17:01:15.523Z",
+    "user": [
+      "galihwikuu"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "2",
+    "object_repr": "PRM Gemolong 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Alamat\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-11-10T18:36:31.202Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "4",
+    "object_repr": "Agus Ali Johar, S.E. (Bendahara)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-11-10T18:36:31.205Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Drs. Joko Margiantomo, M.Pd. (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-11-10T18:36:31.206Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "3",
+    "object_repr": "Muslih, S.Pd., M.Pd. (Sekretaris)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-11-10T18:54:27.502Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "5",
+    "object_repr": "galihwiku (anggota)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-11-10T18:55:08.587Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "5",
+    "object_repr": "galihwiku (anggota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-11-10T18:55:08.589Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "1",
+    "object_repr": "Drs. Joko Margiantomo, M.Pd. (Ketua Ranting)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-11-10T18:55:08.590Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "3",
+    "object_repr": "Muslih, S.Pd., M.Pd. (Sekretaris)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-11-10T18:55:08.590Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "4",
+    "object_repr": "Agus Ali Johar, S.E. (Bendahara)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-11-10T19:01:53.633Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "5",
+    "object_repr": "galihwiku (anggota)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-11-10T19:05:03.682Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "6",
+    "object_repr": "galihwikuu (anggota)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-11-10T19:05:10.717Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "6",
+    "object_repr": "galihwikuu (anggota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Urutan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-11-10T19:27:52.451Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "pimpinan"
+    ],
+    "object_id": "7",
+    "object_repr": "temmy (jojsis)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-11-10T19:29:32.777Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Lazismu Sragen Gelar Rakor Evaluasi Ramadhan 1447 H, Target Zakat Lampaui Capaian",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-11-10T19:42:40.558Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "profilorganisasi"
+    ],
+    "object_id": "1",
+    "object_repr": "Pimpinan Cabang Muhammadiyah Gemolong",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Telepon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-11-15T05:05:22.492Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "1",
+    "object_repr": "PRM Gemolong 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ketua\", \"Alamat\", \"Telepon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-11-15T05:05:53.584Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "pcm",
+      "ranting"
+    ],
+    "object_id": "1",
+    "object_repr": "PRM Gemolong 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ketua\", \"Alamat\", \"Telepon\"]}}]"
   }
 }
 ]
