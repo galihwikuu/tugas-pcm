@@ -86,7 +86,80 @@ Tanda kutip tunggal wajib dipakai karena kunci Django sering memuat karakter sep
 | `ALLOWED_HOSTS` | Daftar host yang diizinkan, dipisah koma |
 | `DATABASE_URL` | Dikosongkan, berarti memakai SQLite |
 
-### 4. Buat tabel database
+## 4. Konfigurasi Environment
+
+Buat file `.env` berdasarkan template yang tersedia:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Buka file `.env`, kemudian sesuaikan konfigurasi database:
+
+```dotenv
+DB_NAME=pcm_django
+DB_USER=pcm_user
+DB_PASSWORD=password_lokal_kamu
+DB_HOST=127.0.0.1
+DB_PORT=5433
+```
+
+**Catatan:**
+- Setiap anggota boleh menggunakan password lokal masing-masing.
+- File `.env` tidak boleh diunggah ke GitHub.
+- Jangan mengubah nama database dan username tanpa menyesuaikan konfigurasi Docker.
+
+## 5. Menjalankan PostgreSQL dengan Docker
+
+Buka Docker Desktop
+Pastikan Docker Desktop sudah aktif.
+
+Jalankan PostgreSQL:
+
+```powershell
+docker compose up -d
+```
+
+Periksa status container:
+
+```powershell
+docker compose ps
+```
+
+Pastikan container PostgreSQL menunjukkan status `healthy`.
+
+PostgreSQL berjalan dengan konfigurasi:
+
+| Konfigurasi | Nilai |
+|---|---|
+| Database | pcm_django |
+| Username | pcm_user |
+| Port komputer | 5433 |
+| Port container | 5432 |
+| Image | postgres:17-alpine |
+
+Port komputer menggunakan 5433 agar tidak bertabrakan dengan PostgreSQL proyek lain.
+
+Jika port 5433 sudah digunakan, ubah port host pada `compose.yaml` dan sesuaikan `DB_PORT` pada `.env`.
+
+## 6. Migrasi Database
+
+Setelah PostgreSQL berjalan, jalankan migrasi Django:
+
+```powershell
+uv run python manage.py migrate
+```
+
+Perintah tersebut akan membuat tabel database berdasarkan migration yang tersedia di proyek.
+
+Untuk memeriksa status migrasi:
+
+```powershell
+uv run python manage.py showmigrations
+```
+
+
+### 7. Buat tabel database
 
 ```bash
 uv run python manage.py migrate
@@ -94,7 +167,7 @@ uv run python manage.py migrate
 
 Perintah ini membuat file `db.sqlite3` di folder proyek.
 
-### 5. Muat data awal
+### 8. Muat data awal
 
 ```bash
 uv run python manage.py seed_pcm
@@ -104,7 +177,7 @@ Command ini memuat data awal (profil, pimpinan, ranting, amal usaha, berita, age
 
 > **Catatan:** foto yang dirujuk data awal tersimpan di folder `media/` dan ikut repository, jadi gambar di hero, kartu pimpinan, berita, dan amal usaha tampil setelah data dimuat. Foto yang diunggah lewat admin setelah itu hanya tersimpan di komputer yang mengunggahnya.
 
-### 6. Buat akun administrator
+### 9. Buat akun administrator
 
 ```bash
 uv run python manage.py createsuperuser
@@ -112,7 +185,7 @@ uv run python manage.py createsuperuser
 
 Ikuti instruksi untuk mengisi username, email, dan password. Akun ini hanya berlaku di database lokal masing-masing.
 
-### 7. Jalankan server
+### 10. Jalankan server
 
 ```bash
 uv run python manage.py runserver
